@@ -74,10 +74,6 @@ on post-fs-data
     mkdir /data/vendor/log/abox 0771 audioserver system
     mkdir /efs/maxim 0770 audioserver audio
 
-# NFC: create data/nfc for nv storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
-
     setprop vold.post_fs_data_done 1
 
 # Permissions Camera

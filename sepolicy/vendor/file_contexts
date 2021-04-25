@@ -133,8 +133,7 @@
 
 ####################################
 # data files
-/data/nfc(/.*)?                    u:object_r:nfc_data_file:s0
-/data/vendor/nfc(/.*)?             u:object_r:nfc_data_file:s0
+/data/vendor/nfc(/.*)?             u:object_r:nfc_vendor_data_file:s0
 /data/log(/.*)?			   u:object_r:log_data_file:s0
 /data/snap(/.*)?		   u:object_r:snap_data_file:s0
 
