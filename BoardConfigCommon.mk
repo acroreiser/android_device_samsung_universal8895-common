@@ -20,7 +20,7 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Include path
-TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
+$(call soong_config_set,samsungVars,target_specific_header_path,device/samsung/universal8895-common/include)
 
 # Verified Boot
 BOARD_AVB_ENABLE := false
