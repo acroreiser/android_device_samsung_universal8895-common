@@ -26,6 +26,7 @@ type log_data_file, file_type, data_file_type;
 type snap_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 type vendor_nfc_vendor_data_file, file_type, data_file_type;
+type vendor_camera_data_file, file_type, data_file_type;
 
 # sysfs types
 type sysfs_batteryinfo_charger_writable, sysfs_type, rw_fs_type, fs_type;
