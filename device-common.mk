@@ -187,7 +187,7 @@ PRODUCT_COPY_FILES += \
 
 # Memory
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl
+    android.hardware.memtrack-service.samsung-mali
 
 # NFC
 PRODUCT_PACKAGES += \
