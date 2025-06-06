@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    SettingsProviderResCommon
+
 # APEX
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
