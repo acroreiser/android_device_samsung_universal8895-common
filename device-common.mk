@@ -338,8 +338,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung
 
 # Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2021-04-01
+VENDOR_SECURITY_PATCH := 2021-04-01
 
 # Protobuf
 PRODUCT_COPY_FILES += \
