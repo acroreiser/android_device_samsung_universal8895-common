@@ -122,6 +122,10 @@ OVERRIDE_RS_DRIVER := libRSDriverArm.so
 # Samsung HALs
 TARGET_POWERHAL_VARIANT := samsung
 
+# OTA package
+TARGET_OTA_ALLOW_NON_AB := true
+AB_OTA_UPDATER := false
+
 # Bluetooth
 BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH := true
