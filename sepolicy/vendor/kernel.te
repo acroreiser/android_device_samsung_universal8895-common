@@ -10,3 +10,8 @@ allow kernel device:dir create_dir_perms;
 allow kernel device:dir search;
 allow kernel self:capability { mknod };
 allow kernel sysfs_sec_key:dir search;
+
+allow kernel sysfs_sec_key:file open;
+
+allow kernel self:capability { dac_override };
+allow kernel device:blk_file { getattr setattr unlink };

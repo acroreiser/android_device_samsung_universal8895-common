@@ -51,3 +51,16 @@ allow init proc_swapiness:file w_file_perms;
 allow init sysfs_scsi_host_writable:file w_file_perms;
 
 unix_socket_connect(init, property, rild)
+
+#vendor.sec.rild.libpath
+set_prop(vendor_init, vendor_radio_prop)
+
+#ro.hdcp2.rx etc
+set_prop(vendor_init, default_prop)
+
+#vold.emergency_reset, ro.crypto.fuse_sdcard
+set_prop(vendor_init, vold_prop)
+
+allow vendor_init default_prop:file { read };
+allow vendor_init vold_prop:file { read };
+allow vendor_init cache_file:dir search;

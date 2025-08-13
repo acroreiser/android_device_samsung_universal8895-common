@@ -28,3 +28,18 @@ allow rild hal_audio_default:file r_file_perms;
 add_hwservice(rild, hal_sec_radio_hwservice)
 add_hwservice(rild, hal_sec_radio_bridge_hwservice)
 add_hwservice(rild, hal_sec_radio_channel_hwservice)
+
+allow rild log_vendor_data_file:dir create;
+allow rild hwservicemanager:binder call;
+allow rild binder_device:chr_file { ioctl };
+
+#props
+#allow rild radio_prop:property_service set;
+#allow rild system_radio_prop:property_service set;
+#allow rild system_prop:property_service get;
+
+allow rild tty_device:chr_file { read write open getattr };
+allow rild radio_device:chr_file { ioctl read write open getattr };
+
+#ESAR
+allow rild default_prop:file { open getattr read };
