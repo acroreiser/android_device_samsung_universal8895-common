@@ -41,7 +41,7 @@ TARGET_NO_RADIOIMAGE := true
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
-TARGET_VENDOR_PROP += $(COMMON_PATH)/system.prop
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
