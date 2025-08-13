@@ -205,6 +205,12 @@ PRODUCT_PACKAGES += \
 ## the preloading and non-preloading builds, please check the above issue.
 PRODUCT_PROPERTY_OVERRIDES += ro.zygote.disable_gl_preload=1
 
+# ADB Debug
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.sys.usb.config=mtp,adb \
+#    persist.vendor.usb.config=mtp,adb \
+#    ro.debuggable=1
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.samsung-libperfmgr
