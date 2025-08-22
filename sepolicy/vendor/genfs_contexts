@@ -86,5 +86,4 @@ genfscon sysfs /firmware/devicetree/base/model_info-system_rev u:object_r:sysfs_
 
 genfscon sysfs /kernel/gpu/                    u:object_r:sysfs_gpu:s0
 genfscon sysfs /kernel/gpu/gpu_max_clock       u:object_r:sysfs_gpu_writable:s0
-genfscon sysfs /kernel/gpu/gpu_min_clock       u:object_r:sysfs_gpu_writable:s0
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode u:object_r:sysfs_memboost:s0
