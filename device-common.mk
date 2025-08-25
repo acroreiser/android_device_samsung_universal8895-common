@@ -344,12 +344,11 @@ VENDOR_SECURITY_PATCH := 2021-04-01
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:system/lib/libhidlbase-v32.so \
     prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:system/lib64/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so
 
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-v29 \
     libprotobuf-cpp-lite-v29 \
+    libutils-v32
 
 # Vibrator
 PRODUCT_PACKAGES += \
