@@ -169,7 +169,7 @@ PRODUCT_PACKAGES += \
 
 # Livedisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.universal8895
+    vendor.lineage.livedisplay-service.sysfs
 
 # LPM
 PRODUCT_PACKAGES += \
