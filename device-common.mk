@@ -42,9 +42,9 @@ PRODUCT_PACKAGES += \
     libeffects \
     libspeexresampler \
     libaudioutils \
-    libstagefright_softomx \
+    libstagefright_softomx.vendor \
     libtinycompress \
-    libstagefright_softomx_plugin
+    libstagefright_softomx_plugin.vendor
 
 PRODUCT_PACKAGES += \
     SamsungDAP
@@ -94,7 +94,10 @@ PRODUCT_PACKAGES += \
     camera.universal8895 \
     idev0_shim \
     android.hardware.camera.provider-service_32.samsung \
-    libcamera_compat
+    libcamera_compat \
+    libion.vendor \
+    libstdc++_vendor \
+    libsensorndkbridge
 
 # Camera configurations
 PRODUCT_COPY_FILES += \
@@ -106,9 +109,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0 \
-    android.hardware.drm@1.1 \
-    android.hardware.drm@1.3 \
+    android.hardware.drm@1.0.vendor \
+    android.hardware.drm@1.1.vendor \
     libfwdlockengine \
     libdrmclearkeyplugin \
     android.hardware.drm@1.0-service \
@@ -279,16 +281,17 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio.deprecated@1.0 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.radio.config@1.1 \
-    android.hardware.radio.config@1.2 \
-    android.hardware.radio@1.2 \
-    android.hardware.radio@1.3 \
-    android.hardware.radio@1.4 \
-    libxml2 \
-    libnetutils \
-    libsqlite \
+    android.hardware.radio.deprecated@1.0.vendor \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.config@1.1.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3.vendor \
+    android.hardware.radio@1.4.vendor \
+    libxml2.vendor \
+    libexpat.vendor \
+    libnetutils.vendor \
+    libsqlite.vendor \
     secril_config_svc
 
 # SamsungDoze
@@ -302,6 +305,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.frameworks.schedulerservice@1.0.vendor \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl.samsung \
     android.hardware.sensors@1.0-service
 
