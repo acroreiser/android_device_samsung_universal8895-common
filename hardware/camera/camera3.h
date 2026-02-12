@@ -1657,10 +1657,7 @@ typedef struct camera3_stream {
      *   supported due to imcompatible buffer format, dataSpace, or other hardware
      *   limitations.
      */
-    uint32_t usage;
-
-    /* unknown samsung addition */
-    char unknown1[4];
+    uint64_t usage;
 
     /**
      * The maximum number of buffers the HAL device may need to have dequeued at
@@ -1760,10 +1757,6 @@ typedef struct camera3_stream {
 
     /* reserved for future use */
     void *reserved[6];
-
-    /* unknown samsung addition */
-    char unknown2[0x14];
-
 } camera3_stream_t;
 
 /**

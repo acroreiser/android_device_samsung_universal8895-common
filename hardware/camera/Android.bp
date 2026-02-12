@@ -1,6 +1,7 @@
 cc_library_shared {
     name: "camera.universal8895",
     relative_install_path: "hw",
+    vendor: true,
 
     srcs: [
         "CameraWrapper.cpp",
@@ -22,7 +23,7 @@ cc_library_shared {
     shared_libs: [
         "libhardware",
         "liblog",
-        "libcamera_client",
+        "libcamera_compat",
         "libutils",
         "libcutils",
         "android.hidl.token@1.0-utils",
@@ -33,10 +34,13 @@ cc_library_shared {
     include_dirs: [
         "frameworks/native/libs/nativewindow/include",
         "frameworks/native/libs/arect/include",
+        "frameworks/av/camera/include/camera",
         "frameworks/av/media/ndk/include",
+        "system/media/camera/include",
     ],
 
     header_libs: [
         "libnativebase_headers",
+        "camera_headers",
     ],
 }
