@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
     libcamera_compat \
     libion.vendor \
     libstdc++_vendor \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libdemangle.vendor
 
 # Camera configurations
 PRODUCT_COPY_FILES += \
