@@ -319,7 +319,6 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     libaudioparams_shim \
     libexynoscamera_shim \
-    libexynosdisplay_shim \
     libprocessgroup_shim
 
 # stagefright
