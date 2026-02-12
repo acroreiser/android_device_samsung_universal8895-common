@@ -370,5 +370,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/ramdisk/etc/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc
 
+# First stage init
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos8895:$(TARGET_COPY_OUT_RAMDISK)/fstab.samsungexynos8895
+
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/universal8895-common/universal8895-common-vendor.mk)
