@@ -20,4 +20,5 @@ cc_library_shared {
         "libbase",
         "libcutils",
     ],
+    vendor: true,
 }
