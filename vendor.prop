@@ -9,3 +9,6 @@ ro.telephony.default_network=10,10
 # Fingerprint
 ro.vendor.fingerprint.type?=rear
 ro.vendor.fingerprint.supports_gestures?=true
+
+# BPF
+ro.bpf.kver_override=5.4.300
