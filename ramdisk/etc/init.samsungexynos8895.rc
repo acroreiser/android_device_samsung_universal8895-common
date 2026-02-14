@@ -3,7 +3,6 @@ import /vendor/etc/init/hw/init.baseband.rc
 import /vendor/etc/init/hw/init.samsung.rc
 
 on early-init
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
     mount cgroup cpuset /dev/cpuset cpuset
 
 on init
@@ -133,9 +132,6 @@ on post-fs-data
 # Permissions for PCIe
     chown system system /sys/devices/platform/116a0000.pcie0/pcie_sysfs
 
-    chmod 0755 /sys/kernel/debug/tracing
-    restorecon /sys/kernel/debug/tracing/trace_marker
-
 # MST/NFC Switch
     chmod 0660 /dev/mst_ctrl
 
@@ -153,15 +149,7 @@ on boot
 # SSWAP
     write /proc/sys/vm/swappiness 160
 
-    # Allow to access debugfs for system:system
-    chmod 0755 /sys/kernel/debug
-    chown system system /sys/kernel/debug
-
     setprop ro.radio.noril no
-
-    # Set up kernel tracing, but disable it by default
-    chmod 0222 /sys/kernel/debug/tracing/trace_marker
-    write /sys/kernel/debug/tracing/tracing_on 0
 
     #migrate_os
     chown system radio /sys/devices/system/sec_os_ctrl/migrate_os
@@ -983,7 +971,6 @@ on property:sys.boot_completed=1
     setprop security.semdaemonfinish 0
     start sem_daemon
     # Change permission for A-Box firmware logs file & GPR dump
-    chown audioserver system /sys/kernel/debug/abox/log-00
     chown audioserver system /sys/devices/platform/13e50000.abox/13e50000.abox:abox_debug@0/gpr
     chown audioserver system /sys/devices/platform/13e50000.abox/13e50000.abox:abox_debug@0/calliope_sram
     chown audioserver system /sys/devices/platform/13e50000.abox/13e50000.abox:abox_debug@0/calliope_dram
